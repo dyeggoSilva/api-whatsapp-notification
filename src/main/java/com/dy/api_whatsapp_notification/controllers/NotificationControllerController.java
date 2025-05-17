@@ -16,7 +16,7 @@ public class NotificationControllerController {
     private NotificationService notificationService;
 
     @PostMapping("/send")
-    public String sendNotification(@RequestParam String phoneNumber, @RequestParam String message) {
-        return notificationService.sendWhatsAppMessage(phoneNumber, message);
+    public String sendNotification(@RequestParam String nome, @RequestParam String phoneNumber, @RequestParam String message) {
+        return notificationService.sendWhatsAppMessage(nome,phoneNumber, message);
     }
 }

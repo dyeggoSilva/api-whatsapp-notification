@@ -7,17 +7,22 @@ import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import org.springframework.boot.autoconfigure.web.WebProperties;
 
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
-public class Notification {
+public class Notifications {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String nome;
     private String numero;
     private String mensagem;
+
+    public Notifications(String nome, String numero, String mensagem) {
+        this.nome = nome;
+        this.numero = numero;
+        this.mensagem = mensagem;
+    }
 }
